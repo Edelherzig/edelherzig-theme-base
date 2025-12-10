@@ -62,28 +62,28 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 }
 
 /*
- * Color slugs compatibility between Raft and TI FSE themes
+ * Color slugs compatibility between edelherzig and TI FSE themes
  */
 .has-ti-bg-inv-background-color {
-	background-color: var(--wp--preset--color--raft-bg-inv);
+	background-color: var(--wp--preset--color--edelherzig-bg-inv);
 }
 
 .has-ti-bg-background-color {
-	background-color: var(--wp--preset--color--raft-bg);
+	background-color: var(--wp--preset--color--edelherzig-bg);
 }
 
 .has-ti-bg-alt-background-color {
-	background-color: var(--wp--preset--color--raft-bg-alt);
+	background-color: var(--wp--preset--color--edelherzig-bg-alt);
 }
 
 .has-ti-fg-alt-color {
-	color: var(--wp--preset--color--raft-fg-alt);
+	color: var(--wp--preset--color--edelherzig-fg-alt);
 }
 
 .has-ti-accent-background-color {
-	background-color: var(--wp--preset--color--raft-accent);
+	background-color: var(--wp--preset--color--edelherzig-accent);
 }
 
 .has-ti-accent-secondary-background-color {
-	background-color: var(--wp--preset--color--raft-accent-secondary);
+	background-color: var(--wp--preset--color--edelherzig-accent-secondary);
 }

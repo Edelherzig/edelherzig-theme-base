@@ -3,23 +3,23 @@
  * Assets manager class.
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.0
  */
 
-namespace Raft;
+namespace Edelherzig;
 
 /**
  * Class Assets_Manager
  *
- * @package raft
+ * @package edelherzig
  */
 class Assets_Manager {
 	const ASSETS_SLUGS = array(
-		'frontend-css'       => 'raft-style',
-		'editor-css'         => 'raft-editor',
-		'welcome-notice'     => 'raft-welcome-notice',
-		'design-pack-notice' => 'raft-design-pack-notice',
+		'frontend-css'       => 'edelherzig-style',
+		'editor-css'         => 'edelherzig-editor',
+		'welcome-notice'     => 'edelherzig-welcome-notice',
+		'design-pack-notice' => 'edelherzig-design-pack-notice',
 	);
 
 	/**
@@ -32,9 +32,9 @@ class Assets_Manager {
 	 * @return void
 	 */
 	public static function enqueue_style( string $handle, string $file, array $dependencies = array() ) {
-		$uri = RAFT_URL . 'assets/css/build/' . $file . '.css';
+		$uri = EDELHERZIG_URL . 'assets/css/build/' . $file . '.css';
 
-		wp_register_style( $handle, esc_url( $uri ), $dependencies, RAFT_VERSION );
+		wp_register_style( $handle, esc_url( $uri ), $dependencies, EDELHERZIG_VERSION );
 		wp_style_add_data( $handle, 'rtl', 'replace' );
 		wp_enqueue_style( $handle );
 	}
@@ -51,13 +51,13 @@ class Assets_Manager {
 	 *
 	 * @return void
 	 */
-	public static function enqueue_script( string $handle, string $file, bool $in_footer = true, array $dependencies = array(), array $localization = array(), $localization_object_name = 'raftData' ) {
-		$uri = RAFT_URL . 'assets/js/build/' . $file . '.js';
-		$php = RAFT_DIR . 'assets/js/build/' . $file . '.asset.php';
+	public static function enqueue_script( string $handle, string $file, bool $in_footer = true, array $dependencies = array(), array $localization = array(), $localization_object_name = 'edelherzigData' ) {
+		$uri = EDELHERZIG_URL . 'assets/js/build/' . $file . '.js';
+		$php = EDELHERZIG_DIR . 'assets/js/build/' . $file . '.asset.php';
 
 		$deps = is_file( $php ) ? include $php : array(
 			'dependencies' => array(),
-			'version'      => RAFT_VERSION,
+			'version'      => EDELHERZIG_VERSION,
 		);
 
 
@@ -72,7 +72,7 @@ class Assets_Manager {
 		}
 
 		wp_enqueue_script( $handle );
-		wp_set_script_translations( $handle, 'raft' );
+		wp_set_script_translations( $handle, 'edelherzig' );
 	}
 
 	/**
@@ -83,6 +83,6 @@ class Assets_Manager {
 	 * @return string
 	 */
 	public static function get_image_url( string $file ): string {
-		return RAFT_URL . 'assets/img/' . $file;
+		return EDELHERZIG_URL . 'assets/img/' . $file;
 	}
 }

@@ -3,32 +3,32 @@
  * Inverted Gallery with Title
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.5
  *
  * slug: inverted-gallery-with-title
  * title: Inverted Gallery with Title
- * categories: raft/content
+ * categories: edelherzig/content
  * keywords: gallery, inverted, title
  */
 
-$raft_strings = apply_filters( 'raft_strings', array() );
+$edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 // Define image URLs.
 $images = array(
-	RAFT_URL . 'assets/img/shape-01.svg',
-	RAFT_URL . 'assets/img/shape-07.svg',
-	RAFT_URL . 'assets/img/shape-06.svg',
-	RAFT_URL . 'assets/img/shape-05.svg',
-	RAFT_URL . 'assets/img/shape-08.svg',
+	EDELHERZIG_URL . 'assets/img/shape-01.svg',
+	EDELHERZIG_URL . 'assets/img/shape-07.svg',
+	EDELHERZIG_URL . 'assets/img/shape-06.svg',
+	EDELHERZIG_URL . 'assets/img/shape-05.svg',
+	EDELHERZIG_URL . 'assets/img/shape-08.svg',
 );
 
 return array(
-	'title'      => __( 'Inverted Gallery with Title', 'raft' ),
-	'categories' => array( 'raft/content' ),
+	'title'      => __( 'Inverted Gallery with Title', 'edelherzig' ),
+	'categories' => array( 'edelherzig/content' ),
 	'content'    => '
-        <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-inv","textColor":"raft-fg-alt","layout":{"inherit":true,"type":"constrained"}} -->
-        <div class="wp-block-group alignfull has-raft-fg-alt-color has-raft-bg-inv-background-color has-text-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
+        <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"edelherzig-bg-inv","textColor":"edelherzig-fg-alt","layout":{"inherit":true,"type":"constrained"}} -->
+        <div class="wp-block-group alignfull has-edelherzig-fg-alt-color has-edelherzig-bg-inv-background-color has-text-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
             <!-- wp:group {"align":"wide","layout":{"inherit":false}} -->
             <div class="wp-block-group alignwide">
                 <!-- wp:columns -->
@@ -36,11 +36,11 @@ return array(
                     <!-- wp:column {"width":"30%"} -->
                     <div class="wp-block-column" style="flex-basis:30%">
                         <!-- wp:heading -->
-                        <h2 class="wp-block-heading">' . esc_html( $raft_strings['section_title'] ) . '</h2>
+                        <h2 class="wp-block-heading">' . esc_html( $edelherzig_strings['section_title'] ) . '</h2>
                         <!-- /wp:heading -->
 
                         <!-- wp:paragraph -->
-                        <p>' . esc_html( $raft_strings['section_description'] ) . '</p>
+                        <p>' . esc_html( $edelherzig_strings['section_description'] ) . '</p>
                         <!-- /wp:paragraph -->
                     </div>
                     <!-- /wp:column -->

@@ -3,5 +3,5 @@
 docker run \
   --user root \
   --rm \
-  --volume  "$(pwd):/var/www/html/raft" \
-  wordpress:cli bash -c 'php -d memory_limit=1024M "$(which wp)" i18n make-pot ./raft/ ./raft/languages/raft.pot --headers={\"Last-Translator\":\"friends@themeisle.com\"\,\"Project-Id-Version\":\"Raft\"\,\"Report-Msgid-Bugs-To\":\"https://github.com/Codeinwp/raft/issues\"\} --allow-root --exclude=dist,build,bundle,e2e-tests '
+  --volume  "$(pwd):/var/www/html/edelherzig-base" \
+  wordpress:cli bash -c 'php -d memory_limit=1024M "$(which wp)" i18n make-pot ./edelherzig-base/ ./edelherzig-base/languages/edelherzig-base.pot --headers={\"Last-Translator\":\"friends@themeisle.com\"\,\"Project-Id-Version\":\"edelherzig-base\"\,\"Report-Msgid-Bugs-To\":\"https://github.com/Codeinwp/edelherzig-base/issues\"\} --allow-root --exclude=dist,build,bundle,e2e-tests '

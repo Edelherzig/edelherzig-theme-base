@@ -3,18 +3,18 @@
  * Patterns Handler.
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.0
  */
 
-namespace Raft;
+namespace Edelherzig;
 
 use WP_Block_Pattern_Categories_Registry;
 
 /**
  * Class Block_Patterns
  *
- * @package raft
+ * @package edelherzig
  */
 class Block_Patterns {
 
@@ -59,23 +59,23 @@ class Block_Patterns {
 	 */
 	private function setup_properties() {
 		$categories = array(
-			'raft/featured'           => array( 'label' => __( 'Featured', 'raft' ) ),
-			'raft/headers'            => array( 'label' => __( 'Headers', 'raft' ) ),
-			'raft/footers'            => array( 'label' => __( 'Footers', 'raft' ) ),
-			'raft/heroes_page_titles' => array( 'label' => __( 'Heroes / Page Titles', 'raft' ) ),
-			'raft/features'           => array( 'label' => __( 'Features', 'raft' ) ),
-			'raft/content'            => array( 'label' => __( 'Content', 'raft' ) ),
-			'raft/testimonials'       => array( 'label' => __( 'Testimonials', 'raft' ) ),
-			'raft/team'               => array( 'label' => __( 'Team', 'raft' ) ),
-			'raft/pricing'            => array( 'label' => __( 'Pricing', 'raft' ) ),
-			'raft/call_to_action'     => array( 'label' => __( 'Call to Action', 'raft' ) ),
-			'raft/post_loops'         => array( 'label' => __( 'Post Loops', 'raft' ) ),
-			'raft/pages'              => array( 'label' => __( 'Pages', 'raft' ) ),
+			'edelherzig/featured'           => array( 'label' => __( 'Featured', 'edelherzig' ) ),
+			'edelherzig/headers'            => array( 'label' => __( 'Headers', 'edelherzig' ) ),
+			'edelherzig/footers'            => array( 'label' => __( 'Footers', 'edelherzig' ) ),
+			'edelherzig/heroes_page_titles' => array( 'label' => __( 'Heroes / Page Titles', 'edelherzig' ) ),
+			'edelherzig/features'           => array( 'label' => __( 'Features', 'edelherzig' ) ),
+			'edelherzig/content'            => array( 'label' => __( 'Content', 'edelherzig' ) ),
+			'edelherzig/testimonials'       => array( 'label' => __( 'Testimonials', 'edelherzig' ) ),
+			'edelherzig/team'               => array( 'label' => __( 'Team', 'edelherzig' ) ),
+			'edelherzig/pricing'            => array( 'label' => __( 'Pricing', 'edelherzig' ) ),
+			'edelherzig/call_to_action'     => array( 'label' => __( 'Call to Action', 'edelherzig' ) ),
+			'edelherzig/post_loops'         => array( 'label' => __( 'Post Loops', 'edelherzig' ) ),
+			'edelherzig/pages'              => array( 'label' => __( 'Pages', 'edelherzig' ) ),
 
 			/* Visible only in Site Editor */
 			
-			'raft/singles'            => array( 'label' => __( 'Singles', 'raft' ) ),
-			'raft/archives'           => array( 'label' => __( 'Archives', 'raft' ) ),
+			'edelherzig/singles'            => array( 'label' => __( 'Singles', 'edelherzig' ) ),
+			'edelherzig/archives'           => array( 'label' => __( 'Archives', 'edelherzig' ) ),
 		);
 
 		$patterns = array(
@@ -137,8 +137,8 @@ class Block_Patterns {
 			'contact-details',
 		);
 
-		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
-		$this->patterns   = apply_filters( 'raft_block_patterns', $patterns );
+		$this->categories = apply_filters( 'edelherzig_block_patterns_categories', $categories );
+		$this->patterns   = apply_filters( 'edelherzig_block_patterns', $patterns );
 	}
 
 	/**
@@ -163,13 +163,13 @@ class Block_Patterns {
 	 */
 	private function register_patterns() {
 		foreach ( $this->patterns as $pattern ) {
-			$file = RAFT_DIR . 'inc/patterns/' . $pattern . '.php';
+			$file = EDELHERZIG_DIR . 'inc/patterns/' . $pattern . '.php';
 
 			if ( ! is_file( $file ) ) {
 				continue;
 			}
 
-			register_block_pattern( 'raft/' . $pattern, require $file );
+			register_block_pattern( 'edelherzig/' . $pattern, require $file );
 		}
 	}
 }

@@ -1,22 +1,22 @@
 <?php
 /**
- * Post Query Loop 2 Pattern for Raft Theme
+ * Post Query Loop 2 Pattern for Edelherzig Theme
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.5
  *
  * slug: post-query-loop-2
  * title: Post Query Loop 2
- * categories: raft/post_loops
+ * categories: edelherzig/post_loops
  * keywords: post, query, loop
  */
 
-$raft_strings = apply_filters( 'raft_strings', array() );
+$edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 return array(
-	'title'      => __( 'Post Query Loop 2', 'raft' ),
-	'categories' => array( 'raft/post_loops' ),
+	'title'      => __( 'Post Query Loop 2', 'edelherzig' ),
+	'categories' => array( 'edelherzig/post_loops' ),
 	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"inherit":true,"type":"constrained"}} -->
         <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
@@ -45,8 +45,8 @@ return array(
                 <!-- /wp:query-pagination -->
 
                 <!-- wp:query-no-results -->
-                <!-- wp:paragraph {"backgroundColor":"raft-bg-alt"} -->
-                <p class="has-raft-bg-alt-background-color has-background">' . esc_html( $raft_strings['no_posts_found'] ) . '</p>
+                <!-- wp:paragraph {"backgroundColor":"edelherzig-bg-alt"} -->
+                <p class="has-edelherzig-bg-alt-background-color has-background">' . esc_html( $edelherzig_strings['no_posts_found'] ) . '</p>
                 <!-- /wp:paragraph -->
                 <!-- /wp:query-no-results -->
             </div>

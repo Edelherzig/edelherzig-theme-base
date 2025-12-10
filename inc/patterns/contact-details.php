@@ -3,25 +3,25 @@
  * Contact Details Pattern
  * 
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.5
  *
  * slug: contact-details
  * title: Contact Details
- * categories: raft/content
+ * categories: edelherzig/content
  * keywords: contact, details, information
  */
 
-$raft_strings = apply_filters( 'raft_strings', array() );
+$edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 // Define image URLs.
 $images = array(
-	RAFT_URL . 'assets/img/raft-cover-bg.svg',
+	EDELHERZIG_URL . 'assets/img/edelherzig-cover-bg.svg',
 );
 
 return array(
-	'title'      => __( 'Contact Details', 'raft' ),
-	'categories' => array( 'raft/content' ),
+	'title'      => __( 'Contact Details', 'edelherzig' ),
+	'categories' => array( 'edelherzig/content' ),
 	'content'    => '
 		<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"var:preset|spacing|70"}},"layout":{"inherit":true,"type":"constrained"}} -->
 		<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
@@ -48,19 +48,19 @@ return array(
 								<!-- wp:group {"style":{"border":{"radius":"5px"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 								<div class="wp-block-group" style="border-radius:5px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 									<!-- wp:heading {"textAlign":"left"} -->
-									<h2 class="wp-block-heading has-text-align-left">' . esc_html( $raft_strings['contact_section_title'] ) . '</h2>
+									<h2 class="wp-block-heading has-text-align-left">' . esc_html( $edelherzig_strings['contact_section_title'] ) . '</h2>
 									<!-- /wp:heading -->
 
 									<!-- wp:paragraph -->
-									<p>' . esc_html( $raft_strings['section_description'] ) . '</p>
+									<p>' . esc_html( $edelherzig_strings['section_description'] ) . '</p>
 									<!-- /wp:paragraph -->
 
-									<!-- wp:separator {"backgroundColor":"raft-accent"} -->
-									<hr class="wp-block-separator has-text-color has-raft-accent-color has-alpha-channel-opacity has-raft-accent-background-color has-background"/>
+									<!-- wp:separator {"backgroundColor":"edelherzig-accent"} -->
+									<hr class="wp-block-separator has-text-color has-edelherzig-accent-color has-alpha-channel-opacity has-edelherzig-accent-background-color has-background"/>
 									<!-- /wp:separator -->
 
 									<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"600","letterSpacing":"2px"}},"fontSize":"small"} -->
-									<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $raft_strings['follow'] ) . '</p>
+									<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $edelherzig_strings['follow'] ) . '</p>
 									<!-- /wp:paragraph -->
 
 									<!-- wp:social-links {"size":"has-large-icon-size"} -->
@@ -76,50 +76,50 @@ return array(
 							</div>
 							<!-- /wp:column -->
 
-							<!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60","right":"var:preset|spacing|60"}}},"backgroundColor":"raft-bg-alt"} -->
-							<div class="wp-block-column is-vertically-aligned-top has-raft-bg-alt-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
+							<!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60","right":"var:preset|spacing|60"}}},"backgroundColor":"edelherzig-bg-alt"} -->
+							<div class="wp-block-column is-vertically-aligned-top has-edelherzig-bg-alt-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
 								<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 								<div class="wp-block-group">
 									<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
 									<div class="wp-block-group">
 										<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"600","letterSpacing":"2px"}},"fontSize":"small"} -->
-										<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $raft_strings['subtitle'] ) . '</p>
+										<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $edelherzig_strings['subtitle'] ) . '</p>
 										<!-- /wp:paragraph -->
 
 										<!-- wp:paragraph -->
-										<p>' . esc_html( $raft_strings['contact_details'] ) . '</p>
+										<p>' . esc_html( $edelherzig_strings['contact_details'] ) . '</p>
 										<!-- /wp:paragraph -->
 									</div>
 									<!-- /wp:group -->
 
-									<!-- wp:separator {"backgroundColor":"raft-accent"} -->
-									<hr class="wp-block-separator has-text-color has-raft-accent-color has-alpha-channel-opacity has-raft-accent-background-color has-background"/>
+									<!-- wp:separator {"backgroundColor":"edelherzig-accent"} -->
+									<hr class="wp-block-separator has-text-color has-edelherzig-accent-color has-alpha-channel-opacity has-edelherzig-accent-background-color has-background"/>
 									<!-- /wp:separator -->
 
 									<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
 									<div class="wp-block-group">
 										<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"600","letterSpacing":"2px"}},"fontSize":"small"} -->
-										<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $raft_strings['subtitle'] ) . '</p>
+										<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $edelherzig_strings['subtitle'] ) . '</p>
 										<!-- /wp:paragraph -->
 
 										<!-- wp:paragraph -->
-										<p>' . esc_html( $raft_strings['contact_details'] ) . '</p>
+										<p>' . esc_html( $edelherzig_strings['contact_details'] ) . '</p>
 										<!-- /wp:paragraph -->
 									</div>
 									<!-- /wp:group -->
 
-									<!-- wp:separator {"backgroundColor":"raft-accent"} -->
-									<hr class="wp-block-separator has-text-color has-raft-accent-color has-alpha-channel-opacity has-raft-accent-background-color has-background"/>
+									<!-- wp:separator {"backgroundColor":"edelherzig-accent"} -->
+									<hr class="wp-block-separator has-text-color has-edelherzig-accent-color has-alpha-channel-opacity has-edelherzig-accent-background-color has-background"/>
 									<!-- /wp:separator -->
 
 									<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
 									<div class="wp-block-group">
 										<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"600","letterSpacing":"2px"}},"fontSize":"small"} -->
-										<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $raft_strings['subtitle'] ) . '</p>
+										<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $edelherzig_strings['subtitle'] ) . '</p>
 										<!-- /wp:paragraph -->
 
 										<!-- wp:paragraph -->
-										<p>' . esc_html( $raft_strings['contact_details'] ) . '</p>
+										<p>' . esc_html( $edelherzig_strings['contact_details'] ) . '</p>
 										<!-- /wp:paragraph -->
 									</div>
 									<!-- /wp:group -->

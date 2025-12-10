@@ -3,26 +3,26 @@
  * Homepage 2
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.5
  *
  * slug: homepage-2
  * title: Homepage 2
- * categories: raft/pages
+ * categories: edelherzig/pages
  * keywords: home, landing
  */
 
-$raft_strings = apply_filters( 'raft_strings', array() );
+$edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 return array(
-	'title'      => __( 'Homepage 2', 'raft' ),
-	'categories' => array( 'raft/pages' ),
+	'title'      => __( 'Homepage 2', 'edelherzig' ),
+	'categories' => array( 'edelherzig/pages' ),
 	'content'    => '
-				<!-- wp:pattern {"slug":"raft/hero-columns"} /-->
-                <!-- wp:pattern {"slug":"raft/features-background"} /-->
-                <!-- wp:pattern {"slug":"raft/single-feature-button"} /-->
-				<!-- wp:pattern {"slug":"raft/testimonial-fullwidth"} /-->
-				<!-- wp:pattern {"slug":"raft/call-to-action-image"} /-->
+				<!-- wp:pattern {"slug":"edelherzig/hero-columns"} /-->
+                <!-- wp:pattern {"slug":"edelherzig/features-background"} /-->
+                <!-- wp:pattern {"slug":"edelherzig/single-feature-button"} /-->
+				<!-- wp:pattern {"slug":"edelherzig/testimonial-fullwidth"} /-->
+				<!-- wp:pattern {"slug":"edelherzig/call-to-action-image"} /-->
 
     ',
 );

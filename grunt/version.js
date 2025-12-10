@@ -15,7 +15,7 @@ module.exports = {
 	},
 	functions: {
 		options: {
-			prefix: "RAFT_VERSION', '",
+			prefix: "EDELHERZIG_BASE_VERSION', '",
 		},
 		src: 'functions.php',
 	},

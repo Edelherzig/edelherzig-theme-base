@@ -1,6 +1,9 @@
 node_modules
+npm-debug.log
+yarn-error.log
 
-dist
+/dist/
+/build/
 artifact
 
 assets/css/build
@@ -14,3 +17,11 @@ languages/raft.pot
 
 .DS_Store
 .phpunit.result.cache
+Thumbs.db
+
+.vscode/
+.idea/
+*.sublime-*
+
+*.original
+*.backup

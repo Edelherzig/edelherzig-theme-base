@@ -3,7 +3,7 @@
  * Featured Block Pattern
  * 
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.5
  *
  * slug: features-centered
@@ -12,18 +12,18 @@
  * keywords: feature, service, content
  */
 
-$strings = apply_filters( 'raft_strings', array() );
+$strings = apply_filters( 'edelherzig_strings', array() );
 
 $images = array(
-	RAFT_URL . 'assets/img/shape-07.svg', // Assuming 'shape-07.svg' is the file name.
+	EDELHERZIG_URL . 'assets/img/shape-07.svg', // Assuming 'shape-07.svg' is the file name.
 );
 
 return array(
-	'title'      => __( 'Feature Block', 'raft' ),
-	'categories' => array( 'raft/features' ),
+	'title'      => __( 'Feature Block', 'edelherzig' ),
+	'categories' => array( 'edelherzig/features' ),
 	'content'    => '
-		<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","right":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"0px"}},"backgroundColor":"raft-bg-alt","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
+		<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","right":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"0px"}},"backgroundColor":"edelherzig-bg-alt","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group alignfull has-edelherzig-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
 			<!-- wp:columns {"align":"wide"} -->
 			<div class="wp-block-columns alignwide">
 				<!-- wp:column {"style":{"spacing":{"blockGap":"0"}}} -->

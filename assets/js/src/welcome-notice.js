@@ -1,4 +1,4 @@
-/* global raftData, jQuery */
+/* global edelherzigData, jQuery */
 
 import { installPlugin, activatePlugin } from './common/plugin-install';
 
@@ -13,11 +13,11 @@ function handleWelcomeNotice( $ ) {
 		nonce,
 		otterRefNonce,
 		otterStatus,
-	} = raftData;
+	} = edelherzigData;
 
-	const installBtn = $( '.raft-welcome-notice #raft-install-otter' );
-	const dismissBtn = $( '.raft-welcome-notice .notice-dismiss' );
-	const notice = $( '.raft-welcome-notice' );
+	const installBtn = $( '.edelherzig-welcome-notice #edelherzig-install-otter' );
+	const dismissBtn = $( '.edelherzig-welcome-notice .notice-dismiss' );
+	const notice = $( '.edelherzig-welcome-notice' );
 	const installText = installBtn.find( '.text' );
 	const installSpinner = installBtn.find( '.dashicons' );
 
@@ -35,7 +35,7 @@ function handleWelcomeNotice( $ ) {
 
 		await $.post( ajaxUrl, {
 			nonce: otterRefNonce,
-			action: 'raft_set_otter_ref',
+			action: 'edelherzig_set_otter_ref',
 		} );
 
 		installSpinner.removeClass( 'dashicons-update' );
@@ -67,7 +67,7 @@ function handleWelcomeNotice( $ ) {
 	$( dismissBtn ).on( 'click', () => {
 		$.post( ajaxUrl, {
 			nonce,
-			action: 'raft_dismiss_welcome_notice',
+			action: 'edelherzig_dismiss_welcome_notice',
 			success: hideAndRemoveNotice,
 		} );
 	} );

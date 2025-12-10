@@ -6,37 +6,37 @@
     "color": {
       "palette": [
         {
-          "slug": "raft-bg",
+          "slug": "edelherzig-bg",
           "color": "#2C4A27",
           "name": "Background"
         },
         {
-          "slug": "raft-fg",
+          "slug": "edelherzig-fg",
           "color": "#F2F2F2",
           "name": "Text"
         },
          {
-          "slug": "raft-accent",
+          "slug": "edelherzig-accent",
           "color": "#FAAF58",
           "name": "Accent"
         },
         {
-          "slug": "raft-accent-secondary",
+          "slug": "edelherzig-accent-secondary",
           "color": "#F99E34",
           "name": "Accent Secondary"
         },
         {
-          "slug": "raft-bg-inv",
+          "slug": "edelherzig-bg-inv",
 	        "color": "#181F17",
 	        "name": "Dark Background"
         },
         {
-          "slug": "raft-bg-alt",
+          "slug": "edelherzig-bg-alt",
           "color": "rgba(0, 0, 0, 0.2)",
           "name": "Light Background"
         },
         {
-          "slug": "raft-fg-alt",
+          "slug": "edelherzig-fg-alt",
           "color": "#F8F8F8",
           "name": "Inverted Text"
         }

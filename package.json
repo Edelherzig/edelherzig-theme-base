@@ -1,5 +1,5 @@
 {
-  "name": "raft",
+  "name": "edelherzig",
   "version": "1.1.10",
   "description": "A lightweight theme for the full site editing WordPress experience.",
   "author": "Themeisle <friends@themeisle.com>",
@@ -7,21 +7,13 @@
   "keywords": [
     "wordpress-theme"
   ],
-  "homepage": "https://github.com/Codeinwp/raft",
+  "homepage": "https://edelherzig.de",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Codeinwp/raft"
+    "url": "https://edelherzig.de"
   },
   "theme": {
-    "textdomain": "raft"
-  },
-  "bugs": {
-    "url": "https://github.com/Codeinwp/raft/issues"
-  },
-  "pot": {
-    "reportmsgidbugsto": "https://github.com/Codeinwp/raft/issues",
-    "languageteam": "Themeisle Translate <friends@themeisle.com>",
-    "lasttranslator": "Themeisle Translate Team <friends@themeisle.com>"
+    "textdomain": "edelherzig"
   },
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.1.1",

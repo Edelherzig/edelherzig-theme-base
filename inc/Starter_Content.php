@@ -3,16 +3,16 @@
  * Starter Content Class.
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.6
  */
 
-namespace Raft;
+namespace Edelherzig;
 
 /**
  * Class Core
  *
- * @package raft
+ * @package edelherzig
  */
 class Starter_Content {
 	const HOME_SLUG = 'home';

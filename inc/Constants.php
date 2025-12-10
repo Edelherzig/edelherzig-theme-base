@@ -3,20 +3,20 @@
  * Constants class.
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.0
  */
 
-namespace Raft;
+namespace Edelherzig;
 
 /**
  * Class Constants
  *
- * @package raft
+ * @package edelherzig
  */
 class Constants {
 	const CACHE_KEYS = array(
-		'dismissed-welcome-notice'         => 'raft-welcome-notice-dismissed',
-		'dismissed-fse-design-pack-notice' => 'raft-design-pack-dismissed',
+		'dismissed-welcome-notice'         => 'edelherzig-welcome-notice-dismissed',
+		'dismissed-fse-design-pack-notice' => 'edelherzig-design-pack-dismissed',
 	);
 }

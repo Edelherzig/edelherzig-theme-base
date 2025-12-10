@@ -1,0 +1,16 @@
+/**
+ * Edelherzig Base - Custom Styles
+ * Hier kommen unsere eigenen Styles rein
+ */
+
+/* CSS-Variablen-Overrides */
+:root {
+    /* Beispiel: Eigene Farben */
+    --edelherzig-primary: #0066CC;
+    --edelherzig-secondary: #FF6B35;
+}
+
+/* Eigene Komponenten-Styles */
+.edelherzig-custom-component {
+    /* ... */
+}

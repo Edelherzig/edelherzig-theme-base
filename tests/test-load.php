@@ -2,7 +2,7 @@
 /**
  * Class Test_Loading
  *
- * @package raft
+ * @package edelherzig
  */
 
 class Test_Loading extends WP_UnitTestCase {
@@ -10,17 +10,17 @@ class Test_Loading extends WP_UnitTestCase {
 	 * Test Constants.
 	 */
 	public function testConstants() {
-		$this->assertTrue( defined( 'RAFT_VERSION' ) );
-		$this->assertTrue( defined( 'RAFT_DEBUG' ) );
-		$this->assertTrue( defined( 'RAFT_DIR' ) );
-		$this->assertTrue( defined( 'RAFT_URL' ) );
+		$this->assertTrue( defined( 'EDELHERZIG_VERSION' ) );
+		$this->assertTrue( defined( 'EDELHERZIG_DEBUG' ) );
+		$this->assertTrue( defined( 'EDELHERZIG_DIR' ) );
+		$this->assertTrue( defined( 'EDELHERZIG_URL' ) );
 	}
 
 	/**
 	 * Make sure debug is false.
 	 */
 	public function testDebugOff() {
-		$this->assertEquals( RAFT_DEBUG, WP_DEBUG );
+		$this->assertEquals( EDELHERZIG_DEBUG, WP_DEBUG );
 	}
 
 	/**
@@ -29,6 +29,6 @@ class Test_Loading extends WP_UnitTestCase {
 	 * @return void
 	 */
 	public function testCoreLoaded() {
-		$this->assertTrue( class_exists( 'Raft\Core', false ) );
+		$this->assertTrue( class_exists( 'Edelherzig\Core', false ) );
 	}
 }

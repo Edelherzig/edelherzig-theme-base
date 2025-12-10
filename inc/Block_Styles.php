@@ -3,16 +3,16 @@
  * Block Styles Handler.
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.0
  */
 
-namespace Raft;
+namespace Edelherzig;
 
 /**
  * Class Block_Styles
  *
- * @package raft
+ * @package edelherzig
  */
 class Block_Styles {
 	/**
@@ -49,8 +49,8 @@ class Block_Styles {
 		$this->styles = array(
 			'core/categories' => array(
 				array(
-					'name'  => 'raft-pills',
-					'label' => esc_html__( 'Pills', 'raft' ),
+					'name'  => 'edelherzig-pills',
+					'label' => esc_html__( 'Pills', 'edelherzig' ),
 				),
 			),
 		);

@@ -1,38 +1,38 @@
 <?php
 /**
- * Two Columns of Features Pattern for Raft Theme
+ * Two Columns of Features Pattern for Edelherzig Theme
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.5
  *
  * slug: two-columns-features
  * title: Two Columns of Features
- * categories: raft/features
+ * categories: edelherzig/features
  * keywords: two columns, features, services
  */
 
-$raft_strings = apply_filters( 'raft_strings', array() );
+$edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 $images = array(
-	RAFT_URL . 'assets/img/shape-05.svg',
-	RAFT_URL . 'assets/img/shape-01.svg',
+	EDELHERZIG_URL . 'assets/img/shape-05.svg',
+	EDELHERZIG_URL . 'assets/img/shape-01.svg',
 );
 
 return array(
-	'title'      => __( 'Two Columns of Features', 'raft' ),
-	'categories' => array( 'raft/features' ),
+	'title'      => __( 'Two Columns of Features', 'edelherzig' ),
+	'categories' => array( 'edelherzig/features' ),
 	'content'    => '
-        <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|60"}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"}} -->
-        <div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
+        <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|60"}},"backgroundColor":"edelherzig-bg-alt","layout":{"inherit":true,"type":"constrained"}} -->
+        <div class="wp-block-group alignfull has-edelherzig-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained"}} -->
             <div class="wp-block-group">
                 <!-- wp:heading -->
-                <h2 class="wp-block-heading">' . esc_html( $raft_strings['feature_section_title'] ) . '</h2>
+                <h2 class="wp-block-heading">' . esc_html( $edelherzig_strings['feature_section_title'] ) . '</h2>
                 <!-- /wp:heading -->
 
                 <!-- wp:paragraph {"fontSize":"medium"} -->
-                <p class="has-medium-font-size">' . esc_html( $raft_strings['section_description'] ) . '</p>
+                <p class="has-medium-font-size">' . esc_html( $edelherzig_strings['section_description'] ) . '</p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -48,11 +48,11 @@ return array(
                         <!-- /wp:image -->
 
                         <!-- wp:heading {"level":3} -->
-                        <h3 class="wp-block-heading">' . esc_html( $raft_strings['feature_title'] ) . '</h3>
+                        <h3 class="wp-block-heading">' . esc_html( $edelherzig_strings['feature_title'] ) . '</h3>
                         <!-- /wp:heading -->
 
                         <!-- wp:paragraph -->
-                        <p>' . esc_html( $raft_strings['feature_description'] ) . '</p>
+                        <p>' . esc_html( $edelherzig_strings['feature_description'] ) . '</p>
                         <!-- /wp:paragraph -->
                     </div>
                     <!-- /wp:column -->
@@ -64,11 +64,11 @@ return array(
                         <!-- /wp:image -->
 
                         <!-- wp:heading {"level":3} -->
-                        <h3 class="wp-block-heading">' . esc_html( $raft_strings['feature_title'] ) . '</h3>
+                        <h3 class="wp-block-heading">' . esc_html( $edelherzig_strings['feature_title'] ) . '</h3>
                         <!-- /wp:heading -->
 
                         <!-- wp:paragraph -->
-                        <p>' . esc_html( $raft_strings['feature_description'] ) . '</p>
+                        <p>' . esc_html( $edelherzig_strings['feature_description'] ) . '</p>
                         <!-- /wp:paragraph -->
                     </div>
                     <!-- /wp:column -->

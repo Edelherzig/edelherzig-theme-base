@@ -3,11 +3,11 @@
  * Admin class.
  *
  * @author Themeisle
- * @package raft
+ * @package edelherzig
  * @since 1.0.0
  */
 
-namespace Raft;
+namespace Edelherzig;
 
 /**
  * Admin class.
@@ -30,13 +30,13 @@ class Admin {
 	 */
 	public function setup_admin_hooks() {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
-		add_action( 'wp_ajax_raft_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
-		add_action( 'wp_ajax_raft_set_otter_ref', array( $this, 'set_otter_ref' ) );
+		add_action( 'wp_ajax_edelherzig_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
+		add_action( 'wp_ajax_edelherzig_set_otter_ref', array( $this, 'set_otter_ref' ) );
 		add_action( 'activated_plugin', array( $this, 'after_otter_activation' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
 
 		add_action( 'enqueue_block_editor_assets', array( $this, 'add_fse_design_pack_notice' ) );
-		add_action( 'wp_ajax_raft_dismiss_design_pack_notice', array( $this, 'remove_design_pack_notice' ) );
+		add_action( 'wp_ajax_edelherzig_dismiss_design_pack_notice', array( $this, 'remove_design_pack_notice' ) );
 		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
 	}
 
@@ -57,17 +57,17 @@ class Admin {
 			true,
 			array(),
 			array(
-				'nonce'      => wp_create_nonce( 'raft-dismiss-design-pack-notice' ),
+				'nonce'      => wp_create_nonce( 'edelherzig-dismiss-design-pack-notice' ),
 				'ajaxUrl'    => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'ajaxAction' => 'raft_dismiss_design_pack_notice',
-				'buttonLink' => tsdk_utmify( 'https://themeisle.com/plugins/fse-design-pack', 'editor', 'raft' ),
+				'ajaxAction' => 'edelherzig_dismiss_design_pack_notice',
+				'buttonLink' => tsdk_utmify( 'https://themeisle.com/plugins/fse-design-pack', 'editor', 'edelherzig' ),
 				'strings'    => array(
-					'dismiss'    => __( 'Dismiss', 'raft' ),
-					'recommends' => __( 'Raft recommends', 'raft' ),
-					'learnMore'  => __( 'Learn More', 'raft' ),
+					'dismiss'    => __( 'Dismiss', 'edelherzig' ),
+					'recommends' => __( 'Edelherzig recommends', 'edelherzig' ),
+					'learnMore'  => __( 'Learn More', 'edelherzig' ),
 					'noticeHtml' => sprintf(
 					/* translators: %s: FSE Design Pack: */
-						__( '%s Access a collection of 40+ layout patterns ready to import to your website', 'raft' ),
+						__( '%s Access a collection of 40+ layout patterns ready to import to your website', 'edelherzig' ),
 						'<strong>FSE Design Pack:</strong>'
 					),
 				),
@@ -104,7 +104,7 @@ class Admin {
 		if ( ! isset( $_POST['nonce'] ) ) {
 			return;
 		}
-		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'raft-dismiss-design-pack-notice' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'edelherzig-dismiss-design-pack-notice' ) ) {
 			return;
 		}
 		update_option( Constants::CACHE_KEYS['dismissed-fse-design-pack-notice'], 'yes' );
@@ -130,8 +130,8 @@ class Admin {
 			true,
 			array(),
 			array(
-				'nonce'         => wp_create_nonce( 'raft-dismiss-welcome-notice' ),
-				'otterRefNonce' => wp_create_nonce( 'raft-set-otter-ref' ),
+				'nonce'         => wp_create_nonce( 'edelherzig-dismiss-welcome-notice' ),
+				'otterRefNonce' => wp_create_nonce( 'edelherzig-set-otter-ref' ),
 				'ajaxUrl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
 				'otterStatus'   => $otter_status,
 				'activationUrl' => esc_url(
@@ -154,52 +154,52 @@ class Admin {
 						admin_url( 'site-editor.php' )
 					) 
 				),
-				'activating'    => __( 'Activating', 'raft' ) . '&hellip;',
-				'installing'    => __( 'Installing', 'raft' ) . '&hellip;',
-				'done'          => __( 'Done', 'raft' ),
+				'activating'    => __( 'Activating', 'edelherzig' ) . '&hellip;',
+				'installing'    => __( 'Installing', 'edelherzig' ) . '&hellip;',
+				'done'          => __( 'Done', 'edelherzig' ),
 			) 
 		);
 
-		$notice_html  = '<div class="notice notice-info raft-welcome-notice">';
+		$notice_html  = '<div class="notice notice-info edelherzig-welcome-notice">';
 		$notice_html .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
 		$notice_html .= '<div class="notice-content">';
 
-		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png?1' ) ) . '" alt="' . __( 'Otter Blocks preview', 'raft' ) . '"/>';
+		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png?1' ) ) . '" alt="' . __( 'Otter Blocks preview', 'edelherzig' ) . '"/>';
 
 		$notice_html .= '<div class="notice-copy">';
 
 		$notice_html .= '<h1 class="notice-subtitle">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= __( 'Thanks for downloading Raft Theme 🎉', 'raft' );
+		$notice_html .= __( 'Thanks for downloading Edelherzig Theme 🎉', 'edelherzig' );
 
 		$notice_html .= '</h1>';
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Extend Raft with our Free Builder', 'raft' ), '<strong>Otter Blocks</strong>' );
+		$notice_html .= sprintf( __( 'Extend Edelherzig with our Free Builder', 'edelherzig' ), '<strong>Otter Blocks</strong>' );
 
 		$notice_html .= '</h1>';
 
-		$learn_more = '<a href="https://docs.themeisle.com/article/1975-fse-onboarding" target="_blank">' . __( 'Learn More', 'raft' ) . '</a>';
+		$learn_more = '<a href="https://docs.themeisle.com/article/1975-fse-onboarding" target="_blank">' . __( 'Learn More', 'edelherzig' ) . '</a>';
 
-		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin for more blocks, enhanced functionality, and seamless theme setup.', 'raft' ) . ' ' . $learn_more . '</p>';
+		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin for more blocks, enhanced functionality, and seamless theme setup.', 'edelherzig' ) . ' ' . $learn_more . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
 		/* translators: %s: Otter Blocks */
-		$notice_html .= '<button id="raft-install-otter" class="button button-primary button-hero">';
+		$notice_html .= '<button id="edelherzig-install-otter" class="button button-primary button-hero">';
 		$notice_html .= '<span class="dashicons dashicons-update hidden"></span>';
 		$notice_html .= '<span class="text">';
 
 		if ( 'active' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= __( 'Try it out!', 'raft' );
+			$notice_html .= __( 'Try it out!', 'edelherzig' );
 		} elseif ( 'installed' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter Builder' );
+			$notice_html .= sprintf( __( 'Activate %s', 'edelherzig' ), 'Otter Builder' );
 		} else {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Install %s', 'raft' ), 'Otter Builder' );
+			$notice_html .= sprintf( __( 'Install %s', 'edelherzig' ), 'Otter Builder' );
 		}
 
 		$notice_html .= '</span>';
@@ -224,7 +224,7 @@ class Admin {
 		if ( ! isset( $_POST['nonce'] ) ) {
 			return;
 		}
-		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'raft-dismiss-welcome-notice' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'edelherzig-dismiss-welcome-notice' ) ) {
 			return;
 		}
 		update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
@@ -241,11 +241,11 @@ class Admin {
 			return;
 		}
 
-		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'raft-set-otter-ref' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'edelherzig-set-otter-ref' ) ) {
 			return;
 		}
 
-		update_option( self::OTTER_REF, 'raft' );
+		update_option( self::OTTER_REF, 'edelherzig' );
 
 		wp_send_json_success();
 	}
@@ -308,7 +308,7 @@ class Admin {
 		}
 
 		// Dismiss after one week from activation.
-		$activated_time = get_option( 'raft_install' );
+		$activated_time = get_option( 'edelherzig_install' );
 
 		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) > WEEK_IN_SECONDS ) {
 			update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
@@ -362,7 +362,7 @@ class Admin {
 		}
 
 		// Dismiss after two days from activation.
-		$activated_time = get_option( 'raft_install' );
+		$activated_time = get_option( 'edelherzig_install' );
 
 		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) > ( 2 * DAY_IN_SECONDS ) ) {
 			update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
@@ -393,15 +393,15 @@ class Admin {
 		}
 		
 		add_filter(
-			'themeisle-sdk/survey/' . RAFT_PRODUCT_SLUG,
+			'themeisle-sdk/survey/' . EDELHERZIG_PRODUCT_SLUG,
 			function( $data, $page_slug ) {
-				$install_days_number = intval( ( time() - get_option( 'raft_install', time() ) ) / DAY_IN_SECONDS );
+				$install_days_number = intval( ( time() - get_option( 'edelherzig_install', time() ) ) / DAY_IN_SECONDS );
 
 				$data = array(
 					'environmentId' => 'clp9hp3j71oqndl2ietgq8nej',
 					'attributes'    => array(
 						'install_days_number' => $install_days_number,
-						'version'             => RAFT_VERSION,
+						'version'             => EDELHERZIG_VERSION,
 					),
 				);
 
@@ -410,7 +410,7 @@ class Admin {
 			10,
 			2 
 		);
-		do_action( 'themeisle_internal_page', RAFT_PRODUCT_SLUG, $screen->id );
+		do_action( 'themeisle_internal_page', EDELHERZIG_PRODUCT_SLUG, $screen->id );
 	}
 
 	/**
@@ -424,18 +424,18 @@ class Admin {
 		$config = $configs['default'];
 
 		// translators: %1$s - plugin name, %2$s - HTML tag, %3$s - discount, %4$s - HTML tag, %5$s - company name.
-		$message_template = __( 'Enhance %1$s with %2$s– up to %3$s OFF in our biggest sale of the year. Limited time only.', 'raft' );
+		$message_template = __( 'Enhance %1$s with %2$s– up to %3$s OFF in our biggest sale of the year. Limited time only.', 'edelherzig' );
 
 		$config['dismiss']  = true; // Note: Allow dismiss since it appears on `/wp-admin`.
-		$config['message']  = sprintf( $message_template, 'Raft', 'Otter Blocks Pro', '70%' );
+		$config['message']  = sprintf( $message_template, 'Edelherzig', 'Otter Blocks Pro', '70%' );
 		$config['sale_url'] = add_query_arg(
 			array(
 				'utm_term' => 'free',
 			),
-			tsdk_translate_link( tsdk_utmify( 'https://themeisle.link/otter-bf', 'bfcm', 'raft' ) )
+			tsdk_translate_link( tsdk_utmify( 'https://themeisle.link/otter-bf', 'bfcm', 'edelherzig' ) )
 		);
 
-		$configs[ RAFT_PRODUCT_SLUG ] = $config;
+		$configs[ EDELHERZIG_PRODUCT_SLUG ] = $config;
 
 		return $configs;
 	}

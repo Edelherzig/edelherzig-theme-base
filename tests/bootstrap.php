@@ -2,10 +2,10 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package raft
+ * @package edelherzig
  */
 
-define( 'RAFT_IGNORE_SOURCE_CHECK', true );
+define( 'EDELHERZIG_IGNORE_SOURCE_CHECK', true );
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
 
