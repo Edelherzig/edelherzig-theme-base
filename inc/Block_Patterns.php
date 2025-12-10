@@ -59,23 +59,23 @@ class Block_Patterns {
 	 */
 	private function setup_properties() {
 		$categories = array(
-			'edelherzig/featured'           => array( 'label' => __( 'Featured', 'edelherzig' ) ),
-			'edelherzig/headers'            => array( 'label' => __( 'Headers', 'edelherzig' ) ),
-			'edelherzig/footers'            => array( 'label' => __( 'Footers', 'edelherzig' ) ),
-			'edelherzig/heroes_page_titles' => array( 'label' => __( 'Heroes / Page Titles', 'edelherzig' ) ),
-			'edelherzig/features'           => array( 'label' => __( 'Features', 'edelherzig' ) ),
-			'edelherzig/content'            => array( 'label' => __( 'Content', 'edelherzig' ) ),
-			'edelherzig/testimonials'       => array( 'label' => __( 'Testimonials', 'edelherzig' ) ),
-			'edelherzig/team'               => array( 'label' => __( 'Team', 'edelherzig' ) ),
-			'edelherzig/pricing'            => array( 'label' => __( 'Pricing', 'edelherzig' ) ),
-			'edelherzig/call_to_action'     => array( 'label' => __( 'Call to Action', 'edelherzig' ) ),
-			'edelherzig/post_loops'         => array( 'label' => __( 'Post Loops', 'edelherzig' ) ),
-			'edelherzig/pages'              => array( 'label' => __( 'Pages', 'edelherzig' ) ),
+			'edelherzig/featured'           => array( 'label' => __( 'Featured', 'edelherzig-base' ) ),
+			'edelherzig/headers'            => array( 'label' => __( 'Headers', 'edelherzig-base' ) ),
+			'edelherzig/footers'            => array( 'label' => __( 'Footers', 'edelherzig-base' ) ),
+			'edelherzig/heroes_page_titles' => array( 'label' => __( 'Heroes / Page Titles', 'edelherzig-base' ) ),
+			'edelherzig/features'           => array( 'label' => __( 'Features', 'edelherzig-base' ) ),
+			'edelherzig/content'            => array( 'label' => __( 'Content', 'edelherzig-base' ) ),
+			'edelherzig/testimonials'       => array( 'label' => __( 'Testimonials', 'edelherzig-base' ) ),
+			'edelherzig/team'               => array( 'label' => __( 'Team', 'edelherzig-base' ) ),
+			'edelherzig/pricing'            => array( 'label' => __( 'Pricing', 'edelherzig-base' ) ),
+			'edelherzig/call_to_action'     => array( 'label' => __( 'Call to Action', 'edelherzig-base' ) ),
+			'edelherzig/post_loops'         => array( 'label' => __( 'Post Loops', 'edelherzig-base' ) ),
+			'edelherzig/pages'              => array( 'label' => __( 'Pages', 'edelherzig-base' ) ),
 
 			/* Visible only in Site Editor */
 			
-			'edelherzig/singles'            => array( 'label' => __( 'Singles', 'edelherzig' ) ),
-			'edelherzig/archives'           => array( 'label' => __( 'Archives', 'edelherzig' ) ),
+			'edelherzig/singles'            => array( 'label' => __( 'Singles', 'edelherzig-base' ) ),
+			'edelherzig/archives'           => array( 'label' => __( 'Archives', 'edelherzig-base' ) ),
 		);
 
 		$patterns = array(

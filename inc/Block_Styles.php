@@ -50,7 +50,7 @@ class Block_Styles {
 			'core/categories' => array(
 				array(
 					'name'  => 'edelherzig-pills',
-					'label' => esc_html__( 'Pills', 'edelherzig' ),
+					'label' => esc_html__( 'Pills', 'edelherzig-base' ),
 				),
 			),
 		);

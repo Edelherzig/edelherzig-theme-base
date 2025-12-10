@@ -19,7 +19,7 @@ $images = array(
 );
 
 return array(
-	'title'      => __( 'Call to Action with Image', 'edelherzig' ),
+	'title'      => __( 'Call to Action with Image', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/call_to_action' ),
 	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":"0"},"elements":{"link":{"color":{"text":"var:preset|color|edelherzig-fg-alt"}}}},"backgroundColor":"edelherzig-bg-inv","textColor":"edelherzig-fg-alt","layout":{"inherit":false},"metadata":{}} -->

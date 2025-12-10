@@ -19,7 +19,7 @@ $images = array(
 );
 
 return array(
-	'title'      => __( 'Cover with Background', 'edelherzig' ),
+	'title'      => __( 'Cover with Background', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/heroes_page_titles' ),
 	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->

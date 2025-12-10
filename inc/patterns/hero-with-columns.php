@@ -20,7 +20,7 @@ $images       = array(
 );
 
 return array(
-	'title'      => __( 'Hero with Columns', 'edelherzig' ),
+	'title'      => __( 'Hero with Columns', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/heroes_page_titles' ),
 	'content'    => '
 		<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"32px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->

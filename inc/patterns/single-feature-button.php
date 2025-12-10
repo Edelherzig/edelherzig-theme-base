@@ -19,7 +19,7 @@ $images = array(
 );
 
 return array(
-	'title'      => __( 'single-feature-button', 'edelherzig' ),
+	'title'      => __( 'single-feature-button', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/features' ),
 	'content'    => '
 		<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|80","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"},"metadata":{"name":"three columns of feature cards"}} -->

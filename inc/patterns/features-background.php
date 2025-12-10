@@ -15,7 +15,7 @@
 $edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 return array(
-	'title'      => __( 'Features on Background', 'edelherzig' ),
+	'title'      => __( 'Features on Background', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/features' ),
 	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|70","margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|edelherzig-fg-alt"}}}},"backgroundColor":"edelherzig-bg-inv","textColor":"edelherzig-fg-alt","layout":{"type":"constrained"},"metadata":{}} -->

@@ -72,7 +72,7 @@ class Assets_Manager {
 		}
 
 		wp_enqueue_script( $handle );
-		wp_set_script_translations( $handle, 'edelherzig' );
+		wp_set_script_translations( $handle, 'edelherzig-base' );
 	}
 
 	/**

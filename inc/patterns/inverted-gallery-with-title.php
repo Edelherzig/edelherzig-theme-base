@@ -24,7 +24,7 @@ $images = array(
 );
 
 return array(
-	'title'      => __( 'Inverted Gallery with Title', 'edelherzig' ),
+	'title'      => __( 'Inverted Gallery with Title', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/content' ),
 	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"edelherzig-bg-inv","textColor":"edelherzig-fg-alt","layout":{"inherit":true,"type":"constrained"}} -->

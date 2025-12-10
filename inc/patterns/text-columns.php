@@ -15,7 +15,7 @@
 $edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 return array(
-	'title'      => __( 'Text Columns', 'edelherzig' ),
+	'title'      => __( 'Text Columns', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/content' ),
 	'content'    => '
 		<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true,"type":"constrained"}} -->

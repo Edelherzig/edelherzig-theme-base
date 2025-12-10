@@ -20,7 +20,7 @@ $images = array(
 );
 
 return array(
-	'title'      => __( 'Two Columns of Features', 'edelherzig' ),
+	'title'      => __( 'Two Columns of Features', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/features' ),
 	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|60"}},"backgroundColor":"edelherzig-bg-alt","layout":{"inherit":true,"type":"constrained"}} -->

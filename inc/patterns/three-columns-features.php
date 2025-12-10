@@ -21,7 +21,7 @@ $images = array(
 );
 
 return array(
-	'title'      => __( 'Three Columns of Features', 'edelherzig' ),
+	'title'      => __( 'Three Columns of Features', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/features' ),
 	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->

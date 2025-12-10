@@ -15,7 +15,7 @@
 $edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 return array(
-	'title'      => __( 'Testimonial Cards', 'edelherzig' ),
+	'title'      => __( 'Testimonial Cards', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/testimonials' ),
 	'content'    => '
 		<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->

@@ -60,14 +60,14 @@ class Admin {
 				'nonce'      => wp_create_nonce( 'edelherzig-dismiss-design-pack-notice' ),
 				'ajaxUrl'    => esc_url( admin_url( 'admin-ajax.php' ) ),
 				'ajaxAction' => 'edelherzig_dismiss_design_pack_notice',
-				'buttonLink' => tsdk_utmify( 'https://themeisle.com/plugins/fse-design-pack', 'editor', 'edelherzig' ),
+				'buttonLink' => tsdk_utmify( 'https://themeisle.com/plugins/fse-design-pack', 'editor', 'edelherzig-base' ),
 				'strings'    => array(
-					'dismiss'    => __( 'Dismiss', 'edelherzig' ),
-					'recommends' => __( 'Edelherzig recommends', 'edelherzig' ),
-					'learnMore'  => __( 'Learn More', 'edelherzig' ),
+					'dismiss'    => __( 'Dismiss', 'edelherzig-base' ),
+					'recommends' => __( 'Edelherzig recommends', 'edelherzig-base' ),
+					'learnMore'  => __( 'Learn More', 'edelherzig-base' ),
 					'noticeHtml' => sprintf(
 					/* translators: %s: FSE Design Pack: */
-						__( '%s Access a collection of 40+ layout patterns ready to import to your website', 'edelherzig' ),
+						__( '%s Access a collection of 40+ layout patterns ready to import to your website', 'edelherzig-base' ),
 						'<strong>FSE Design Pack:</strong>'
 					),
 				),
@@ -154,9 +154,9 @@ class Admin {
 						admin_url( 'site-editor.php' )
 					) 
 				),
-				'activating'    => __( 'Activating', 'edelherzig' ) . '&hellip;',
-				'installing'    => __( 'Installing', 'edelherzig' ) . '&hellip;',
-				'done'          => __( 'Done', 'edelherzig' ),
+				'activating'    => __( 'Activating', 'edelherzig-base' ) . '&hellip;',
+				'installing'    => __( 'Installing', 'edelherzig-base' ) . '&hellip;',
+				'done'          => __( 'Done', 'edelherzig-base' ),
 			) 
 		);
 
@@ -164,25 +164,25 @@ class Admin {
 		$notice_html .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
 		$notice_html .= '<div class="notice-content">';
 
-		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png?1' ) ) . '" alt="' . __( 'Otter Blocks preview', 'edelherzig' ) . '"/>';
+		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png?1' ) ) . '" alt="' . __( 'Otter Blocks preview', 'edelherzig-base' ) . '"/>';
 
 		$notice_html .= '<div class="notice-copy">';
 
 		$notice_html .= '<h1 class="notice-subtitle">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= __( 'Thanks for downloading Edelherzig Theme 🎉', 'edelherzig' );
+		$notice_html .= __( 'Thanks for downloading Edelherzig Theme 🎉', 'edelherzig-base' );
 
 		$notice_html .= '</h1>';
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Extend Edelherzig with our Free Builder', 'edelherzig' ), '<strong>Otter Blocks</strong>' );
+		$notice_html .= sprintf( __( 'Extend Edelherzig with our Free Builder', 'edelherzig-base' ), '<strong>Otter Blocks</strong>' );
 
 		$notice_html .= '</h1>';
 
-		$learn_more = '<a href="https://docs.themeisle.com/article/1975-fse-onboarding" target="_blank">' . __( 'Learn More', 'edelherzig' ) . '</a>';
+		$learn_more = '<a href="https://docs.themeisle.com/article/1975-fse-onboarding" target="_blank">' . __( 'Learn More', 'edelherzig-base' ) . '</a>';
 
-		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin for more blocks, enhanced functionality, and seamless theme setup.', 'edelherzig' ) . ' ' . $learn_more . '</p>';
+		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin for more blocks, enhanced functionality, and seamless theme setup.', 'edelherzig-base' ) . ' ' . $learn_more . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
@@ -193,13 +193,13 @@ class Admin {
 
 		if ( 'active' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= __( 'Try it out!', 'edelherzig' );
+			$notice_html .= __( 'Try it out!', 'edelherzig-base' );
 		} elseif ( 'installed' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Activate %s', 'edelherzig' ), 'Otter Builder' );
+			$notice_html .= sprintf( __( 'Activate %s', 'edelherzig-base' ), 'Otter Builder' );
 		} else {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Install %s', 'edelherzig' ), 'Otter Builder' );
+			$notice_html .= sprintf( __( 'Install %s', 'edelherzig-base' ), 'Otter Builder' );
 		}
 
 		$notice_html .= '</span>';
@@ -245,7 +245,7 @@ class Admin {
 			return;
 		}
 
-		update_option( self::OTTER_REF, 'edelherzig' );
+		update_option( self::OTTER_REF, 'edelherzig-base' );
 
 		wp_send_json_success();
 	}
@@ -424,15 +424,15 @@ class Admin {
 		$config = $configs['default'];
 
 		// translators: %1$s - plugin name, %2$s - HTML tag, %3$s - discount, %4$s - HTML tag, %5$s - company name.
-		$message_template = __( 'Enhance %1$s with %2$s– up to %3$s OFF in our biggest sale of the year. Limited time only.', 'edelherzig' );
+		$message_template = __( 'Enhance %1$s with %2$s– up to %3$s OFF in our biggest sale of the year. Limited time only.', 'edelherzig-base' );
 
 		$config['dismiss']  = true; // Note: Allow dismiss since it appears on `/wp-admin`.
-		$config['message']  = sprintf( $message_template, 'Edelherzig', 'Otter Blocks Pro', '70%' );
+		$config['message']  = sprintf( $message_template, 'Edelherzig-Base', 'Otter Blocks Pro', '70%' );
 		$config['sale_url'] = add_query_arg(
 			array(
 				'utm_term' => 'free',
 			),
-			tsdk_translate_link( tsdk_utmify( 'https://themeisle.link/otter-bf', 'bfcm', 'edelherzig' ) )
+			tsdk_translate_link( tsdk_utmify( 'https://themeisle.link/otter-bf', 'bfcm', 'edelherzig-base' ) )
 		);
 
 		$configs[ EDELHERZIG_PRODUCT_SLUG ] = $config;

@@ -15,7 +15,7 @@
 $edelherzig_strings = apply_filters( 'edelherzig_strings', array() );
 
 return array(
-	'title'      => __( 'Homepage 2', 'edelherzig' ),
+	'title'      => __( 'Homepage 2', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/pages' ),
 	'content'    => '
 				<!-- wp:pattern {"slug":"edelherzig/hero-columns"} /-->

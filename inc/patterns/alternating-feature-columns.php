@@ -20,7 +20,7 @@ $images = array(
 );
 
 return array(
-	'title'      => __( 'Alternating Feature Columns', 'edelherzig' ),
+	'title'      => __( 'Alternating Feature Columns', 'edelherzig-base' ),
 	'categories' => array( 'edelherzig/features' ),
 	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","right":"0px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"layout":{"inherit":false}} -->
